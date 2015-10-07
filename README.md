@@ -1,6 +1,7 @@
 easy db checker
 =============
 As we know, a typical workflow of manual test  is: 
+
 1. Click a button or link in our system page.
 2. Check change in DB via Sequel Pro or MysqlWorkBench.
 
