@@ -26,9 +26,9 @@ If you select  on top checkbox, the main frame will be above other windows, and 
 
 ## reference
 
-1.mysql-binlog-connector-java:https://github.com/shyiko/mysql-binlog-connector-java
+1. mysql-binlog-connector-java:https://github.com/shyiko/mysql-binlog-connector-java
 2. mysql-connector-java:http://dev.mysql.com/downloads/connector/j/
-3.jkeymaster: https://github.com/tulskiy/jkeymaster
+3. jkeymaster: https://github.com/tulskiy/jkeymaster
 
 
 If you have any problem when you are using it, please let me know.
