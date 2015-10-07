@@ -1,8 +1,9 @@
 easy db checker
 =============
 As we know, a typical workflow of manual test  is: 
-Click a button or link in our system page.
-check change in DB via Sequel Pro or MysqlWorkBench.
+1. Click a button or link in our system page.
+2. Check change in DB via Sequel Pro or MysqlWorkBench.
+
 However,  It’s hard for QA to find all the data change in all the tables, so he/she may neglect some changes due to dev’s bug. It is dangerous for our product. With this tool, it's easy for QA to find all the data changes instantly,so we can find critical bugs easily.
 
 ## Installation
