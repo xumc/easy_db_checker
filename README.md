@@ -1,2 +1,1 @@
-# easy_db_checker
-a tool to help developers check db easily
+see more http://wiki.dev.fwmrm.net/display/~mxu/guidence+of+simple+db+check+tool
