@@ -19,9 +19,9 @@ Note:
     log-slave-updates
     binlog_format = ROW
     server-id = 1
-    binlog-do-db = fwmrm_oltp
-    binlog-do-db = fwrpm_oltp
-    binlog-do-db = fwmrm_change_history
+    binlog-do-db = database_name1
+    binlog-do-db = database_name2
+    binlog-do-db = database_name3
 ```
 
 ## Usage
