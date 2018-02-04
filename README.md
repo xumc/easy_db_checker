@@ -8,7 +8,19 @@ As we know, a typical workflow of manual test  is:
 However,  It’s hard for QA to find all the data change in all the tables, so he/she may neglect some changes due to dev’s bug. It is dangerous for our product. With this tool, it's easy for QA to find all the data changes instantly,so we can find critical bugs easily.
 
 ## Installation
-please click easy_db_checker.jar, then you can download a file named easy_db_checker.jar.  Then double click this jar and the application will be shown in you right bottom screen. JRE must be installed at first.
+please click easy_db_checker.jar, then you can download a file named easy_db_checker.jar.  Then double click this jar and the application will be shown in you right bottom screen. 
+
+Note:
+1. JRE must be installed at first.
+2. Row based mysql binary log must be opened. You can edit it in my.cnf of mysql server.
+    #sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
+    log_bin = mysql-bin
+    log-slave-updates
+    binlog_format = ROW
+    server-id = 1
+    binlog-do-db = fwmrm_oltp
+    binlog-do-db = fwrpm_oltp
+    binlog-do-db = fwmrm_change_history
 
 ## Usage
 * main frame
