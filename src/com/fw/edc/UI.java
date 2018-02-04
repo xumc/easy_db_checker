@@ -34,7 +34,6 @@ public class UI extends JFrame implements WindowListener {
     private JPanel pane = null;
     private JScrollPane scrollPane = null;
     private BinaryLogClient binClient;
-    private ChangeHistoryAdopter changeHistoryAdopter;
     private EventListener eventListener;
     private Provider provider;
 
@@ -90,50 +89,6 @@ public class UI extends JFrame implements WindowListener {
             }
         });
 
-        final JButton stgBtn = new JButton("STG");
-        final JButton prodBtn = new JButton("PROD");
-        stgBtn.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (stgBtn.getText().equals("STG")) {
-                    String sessionID = (String) JOptionPane.showInputDialog(UI.this, "please input your session ID");
-                    if ((sessionID != null) && (sessionID.length() > 0)) {
-                        changeHistoryAdopter = new ChangeHistoryAdopter(UI.this, "STG", sessionID);
-                        changeHistoryAdopter.begin();
-                        stgBtn.setText("connected to STG now...");
-                    } else {
-                        JOptionPane.showMessageDialog(UI.this, "a session ID id needed");
-                    }
-                } else {
-                    stgBtn.setText("STG");
-                    if (changeHistoryAdopter != null) {
-                        changeHistoryAdopter.stop();
-                        changeHistoryAdopter = null;
-                    }
-                }
-            }
-        });
-
-
-        prodBtn.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (prodBtn.getText().equals("PROD")) {
-                    String sessionID = (String) JOptionPane.showInputDialog(UI.this, "please input your session ID");
-                    if ((sessionID != null) && (sessionID.length() > 0)) {
-                        changeHistoryAdopter = new ChangeHistoryAdopter(UI.this, "STG", sessionID);
-                        changeHistoryAdopter.begin();
-                        prodBtn.setText("connected to PROD now...");
-                    } else {
-                        JOptionPane.showMessageDialog(UI.this, "a session ID id needed");
-                    }
-                } else {
-                    prodBtn.setText("PROD");
-                    if (changeHistoryAdopter != null) {
-                        changeHistoryAdopter.stop();
-                        changeHistoryAdopter = null;
-                    }
-                }
-            }
-        });
         final Checkbox onTopCheckbox = new Checkbox("on top", null, alwaysOnTop);
         onTopCheckbox.addItemListener(new ItemListener(){
 			@Override
@@ -178,25 +133,10 @@ public class UI extends JFrame implements WindowListener {
         	
         });
         
-        JTextField searchBox = new JTextField(10);
-        searchBox.addActionListener(new ActionListener(){
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-//				textAreaPane.
-			}
-        	
-        });
-        
         pane.add(onTopCheckbox);
-        
         pane.add(clearBtn);
         pane.add(settingBtn);
         pane.add(filterBtn);
-        pane.add(stgBtn);
-        pane.add(prodBtn);
-        
-//        pane.add(searchBox);
 
         scrollPane = new JScrollPane(textAreaPane);
         scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
