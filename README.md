@@ -12,11 +12,15 @@ please click easy_db_checker.jar, then you can download a file named easy_db_che
 
 ## Usage
 * main frame
+
+    ![Alt text](/assets/main_frame.png)
 * db setting
 
+    ![Alt text](/assets/db_setting.png)
     Local mode is based on mysql binlog, so you should add the databases to binlog-do-db list in my.cnf at first.
 * filter setting
 
+    ![Alt text](/assets/setting.png)
     If you don’t want to see data changes of some tables, e.g. change_history. You can put the table to ignored list, then data changes of change history table won’t be shown in main frame.
 
 * clear button
