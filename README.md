@@ -18,9 +18,7 @@ please click easy_db_checker.jar, then you can download a file named easy_db_che
 * filter setting
 
     If you don’t want to see data changes of some tables, e.g. change_history. You can put the table to ignored list, then data changes of change history table won’t be shown in main frame.
-* STG/PROD mode
 
-    STG/PROD mode is based on change history, so we need to filter out the data changes due to others' actions. Please copy the session id in cookies and then paste the session id into input dialog before you see the data changes.
 * clear button
 
     You can click clear button to clear the changes list.  Shortcut keys is Command + shift + c.
