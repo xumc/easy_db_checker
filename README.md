@@ -13,7 +13,7 @@ please click easy_db_checker.jar, then you can download a file named easy_db_che
 Note:
 1. JRE must be installed at first.
 2. Row based mysql binary log must be opened. You can edit it in my.cnf of mysql server.
-
+```
     #sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
     log_bin = mysql-bin
     log-slave-updates
@@ -22,6 +22,7 @@ Note:
     binlog-do-db = fwmrm_oltp
     binlog-do-db = fwrpm_oltp
     binlog-do-db = fwmrm_change_history
+```
 
 ## Usage
 * main frame
